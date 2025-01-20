@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 *.png
+
+#special
+commands-copy.js
