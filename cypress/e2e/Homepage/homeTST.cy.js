@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-describe('Homepage', { tags: '@homepage' }, () => {
+describe('Pagina principal', { tags: '@homepage' }, () => {
     
 
 
