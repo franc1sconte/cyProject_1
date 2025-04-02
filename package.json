@@ -1,5 +1,17 @@
 {
+  "name": "cypress-project",
+  "version": "1.0.0",
+  "description": "Proyecto automatizacion Dux - Bateria principal",
+  "main": "index.js",
+  "scripts": {
+    "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/Homepage/*.cy.js"
+  },
+  "author": "Francisco",
+  "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.16.1"
+    "cypress": "^14.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
