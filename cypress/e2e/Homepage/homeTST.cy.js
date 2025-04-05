@@ -1,29 +1,26 @@
-
+import homePage from "../../support/pages/Homepage/homePage"
 
 describe('Pagina principal', { tags: '@homepage' }, () => {
-    
+    let asserts
+    let datos
 
-
-    // beforeEach(() => {
-        
-    // })
-
-    // afterEach(() => {
-        
-    // })
-
-    it('First test', { tags: '@001' }, () => {
-        cy.visit('https://demoqa.com/')
-        cy.url('https://demoqa.com/').should('be.eq', 'https://demoqa.com/')
-        
+    beforeEach(() => {
+        cy.fixture(Cypress.env("assertsJson")).then(function (assertsv) {
+            asserts = assertsv
+        })
+        cy.fixture(Cypress.env("datosJson")).then(function (datosv) {
+            datos = datosv
+        })
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false;
+          });
     })
 
-    it('Second test', { tags: '@002' }, () => {
-        cy.visit('https://www.comocriarmariposas.com.ar/')
-        cy.url('https://www.comocriarmariposas.com.ar/').should('not.be.eq', 'https://demoqa.com/')
+    it('First', { tags: '@001' }, () => {
+        cy.visit(asserts.urls.homepage)
+        cy.get(homePage.logoAassert(), {timeout:5000})
         
+
     })
 
-
-    
 })
